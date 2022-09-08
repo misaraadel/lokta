@@ -2429,6 +2429,38 @@ textarea {
   font-weight: 700;
   color: var(--dark);
 }
+.order-box h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0px;
+}
+.order-box p {
+  color: var(--semi-dark);
+  font-size: 15px;
+  font-weight: 500;
+  margin: 20px 0px;
+}
+.order-box .flex-button {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.order-box .flex-button a {
+  width: 150px !important;
+}
+.order-box .flex-button a.red-btn {
+  -webkit-margin-start: 15px;
+          margin-inline-start: 15px;
+  outline-color: var(--secondary-color) !important;
+}
+.order-box .flex-button a.red-btn::after, .order-box .flex-button a.red-btn::before {
+  background-color: var(--secondary-color) !important;
+}
+.order-box .flex-button a.red-btn:hover {
+  outline-color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
+}
 
 .form-model {
   width: 100%;
@@ -2492,6 +2524,18 @@ textarea {
 
 .modal-content {
   border: 0px !important;
+}
+
+.create-account {
+  width: 100%;
+  display: block;
+  text-align: end;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--semi-dark);
+}
+.create-account:hover {
+  color: var(--primary-color) !important;
 }
 
 @media (max-width: 999px) {

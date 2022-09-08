@@ -1583,6 +1583,44 @@ textarea {
       }
     }
   }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0px;
+  }
+
+  p {
+    color: var(--semi-dark);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 20px 0px;
+  }
+
+  .flex-button {
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    a {
+      width: 150px !important;
+
+      &.red-btn {
+        margin-inline-start: 15px;
+        outline-color: var(--secondary-color) !important;
+
+        &::after, &::before {
+          background-color: var(--secondary-color) !important;
+        }
+
+        &:hover {
+          outline-color: var(--secondary-color) !important;
+          color: var(--secondary-color) !important;
+        }
+      }
+    }
+  }
 }
 
 .form-model {
@@ -1641,6 +1679,19 @@ textarea {
 
 .modal-content {
   border: 0px !important;
+}
+
+.create-account {
+  width: 100%;
+  display: block;
+  text-align: end;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--semi-dark);
+
+  &:hover {
+    color: var(--primary-color) !important;
+  }
 }
 
 @import 'media';
