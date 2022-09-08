@@ -21,12 +21,12 @@
     <nav class="navbar">
       <div class="container">
         <div class="content">
-          <a href="#" class="search-icon">
+          <a href="#" class="search-icon" type="button" data-toggle="modal" data-target="#SearchModal">
             <img src="assets/images/search.svg" alt="">
           </a>
 
           <a href="#" class="brand-name">
-            Shopping Cart
+           Account
           </a>
           
           <div class="hamburger">
@@ -37,6 +37,30 @@
         </div>
       </div>
     </nav>
+
+    <div class="modal fade" id="SearchModal" tabindex="-1" role="dialog" aria-labelledby="SearchModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="SearchModalLabel">
+              Search here
+            </h5>
+          </div>
+          
+          <div class="modal-body">
+            <form action="" class="form-model">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search..." />
+
+                <button class="search-btn">
+                  <img src="assets/images/search.svg" alt="">
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <ul class="bottom-nav">
       <li>
@@ -116,7 +140,7 @@
 
           <ul class="links-contain">
             <li>
-              <a href="#">
+              <a href="update-profile.html">
                 <img src="assets/images/address.png" alt="" />
 
                 <span>
@@ -126,7 +150,7 @@
             </li>
 
             <li>
-              <a href="#">
+              <a href="phone-number.html">
                 <img src="assets/images/phone.png" alt="" />
 
                 <span>
@@ -136,7 +160,7 @@
             </li>
 
             <li>
-              <a href="#">
+              <a href="change-pass.html">
                 <img src="assets/images/pass.png" alt="" />
 
                 <span>
@@ -146,7 +170,7 @@
             </li>
 
             <li>
-              <a href="#">
+              <a href="address.html">
                 <img src="assets/images/address.png" alt="" />
 
                 <span>
@@ -156,7 +180,7 @@
             </li>
 
             <li>
-              <a href="#">
+              <a href="order.html">
                 <img src="assets/images/order.png" alt="" />
 
                 <span>
@@ -166,7 +190,7 @@
             </li>
 
             <li>
-              <a href="#">
+              <a href="favorite.html">
                 <img src="assets/images/heart.png" alt="" />
 
                 <span>
