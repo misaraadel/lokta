@@ -1112,6 +1112,7 @@ button {
   font-weight: 900;
   margin-bottom: 7px;
   text-align: center;
+  border: 0px !important;
 }
 .comming-product .content .price span {
   color: var(--gray-color);
@@ -1306,6 +1307,7 @@ button {
   font-size: 17px;
   font-weight: 900;
   margin-bottom: 7px;
+  border: 0px !important;
 }
 .product-box .content .price span {
   color: var(--gray-color);
