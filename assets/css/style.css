@@ -1257,6 +1257,7 @@ button {
   position: relative;
   z-index: 9;
   margin: 15px 0px;
+  display: flex;
 }
 .product-box .image-content img {
   width: 100%;
