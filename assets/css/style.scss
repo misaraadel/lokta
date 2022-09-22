@@ -1098,8 +1098,11 @@ header {
         }
       }
 
-      .delete-product {
+      .form-contain {
         width: 28%;
+      }
+      .delete-product {
+        width: 100%;
         height: 40px;
         display: flex;
         align-items: center;
