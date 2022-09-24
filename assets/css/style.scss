@@ -48,7 +48,9 @@ html[dir="rtl"] {
     left: 0px;
   }
 
- 
+  .comming-product .solid {
+    display: rtl;
+  }
 }
 
 .general-section {
@@ -1278,6 +1280,38 @@ header {
       width: calc(100% - 100px);
       border-radius: 0px 30px 30px 0px;
     }
+  }
+}
+
+.code_input .code-container input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.05);
+  border: 1px solid rgba($color: #B1CB11, $alpha: 0.5);
+  // border-bottom: 1px solid #ddd;
+}
+
+.count_down {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0px 10px;
+}
+
+.color-secondary {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  color: #B1CB11;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+
+  &:hover {
+    color: #B1CB11;
   }
 }
 
