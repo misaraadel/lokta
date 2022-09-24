@@ -2255,7 +2255,7 @@ textarea {
   flex-direction: column !important;
   justify-content: center;
 }
-.total-data li.btn-data a {
+.total-data li.btn-data button {
   width: 70%;
   height: 50px;
   display: flex;
@@ -2266,7 +2266,7 @@ textarea {
   margin-bottom: 15px;
   border-radius: 50px;
 }
-.total-data li.btn-data a img {
+.total-data li.btn-data button img {
   width: 24px;
   height: 24px;
   -o-object-fit: contain;
@@ -2274,12 +2274,12 @@ textarea {
   -webkit-margin-end: 10px;
           margin-inline-end: 10px;
 }
-.total-data li.btn-data a span {
+.total-data li.btn-data button span {
   color: var(--light);
   font-size: 15px;
   font-weight: 500;
 }
-.total-data li.btn-data a:hover img {
+.total-data li.btn-data button:hover img {
   -webkit-animation: tada 0.3s linear both;
           animation: tada 0.3s linear both;
 }
