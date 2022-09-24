@@ -48,6 +48,7 @@ html[dir="rtl"] {
     left: 0px;
   }
 
+ 
 }
 
 .general-section {
@@ -109,6 +110,7 @@ button {
     position: relative;
     margin: -20px auto 0px;
     border-radius: 40px;
+    direction: ltr;
 
     span {
       color: var(--light);
@@ -487,6 +489,11 @@ button {
   &:hover {
     transform: translateY(-10px);
   }
+}
+
+.product-box .content .buttons-contain .notify-app-btn {
+  width: 100% !important;
+  border-radius: 40px !important;
 }
 
 .center-heading {
