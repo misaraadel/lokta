@@ -1355,6 +1355,10 @@ button {
   justify-content: space-between;
   margin-top: 9px;
 }
+.product-box .content .buttons-contain .notify-app-btn {
+    width: 100% !important;
+    border-radius: 40px !important;
+}
 .product-box .content .buttons-contain .add-to-cart,
 .product-box .content .buttons-contain .whats-app-btn {
   display: flex;
