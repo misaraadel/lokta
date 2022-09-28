@@ -108,17 +108,30 @@ button {
   .solid {
     width: 80%;
     padding: 0px 20px;
-    background-color: var(--secondary-color);
     position: relative;
+    background-color: #ddd;
+    border: 1px solid var(--secondary-color);
     margin: -20px auto 0px;
     border-radius: 40px;
     direction: ltr;
+    overflow: hidden;
+    z-index: 9;
 
     span {
       color: var(--light);
       font-size: 14px;
       font-weight: 700;
       margin-inline-end: 5px;
+    }
+
+    .progress {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: var(--secondary-color);
+      z-index: -1;
+      border-radius: 40px;
     }
   }
 
@@ -301,6 +314,82 @@ button {
         border-color: var(--gray-color);
         opacity: .4;
         z-index: -2;
+      }
+    }
+
+    .progress{
+      width: 50px;
+      height: 50px;
+      line-height: 100px;
+      background: none;
+      box-shadow: none;
+      position: relative;
+
+      &.green{
+        .progress-bar {
+          border-color: var(--primary-color);
+        }
+
+        .progress-left .progress-bar{
+          animation: loading-2 1.5s linear forwards 1.8s;
+        }
+      }
+
+      &:after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 12px solid #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      span {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+      }
+
+      .progress-left {
+        left: 0;
+
+        .progress-bar{
+          left: 100%;
+          border-top-right-radius: 40px;
+          border-bottom-right-radius: 40px;
+          border-left: 0;
+          -webkit-transform-origin: center left;
+          transform-origin: center left;
+        }
+      }
+
+      .progress-bar{
+        width: 100%;
+        height: 100%;
+        background: none;
+        border-width: 12px;
+        border-style: solid;
+        position: absolute;
+        top: 0;
+      }
+
+      .progress-right{
+        right: 0;
+
+        .progress-bar{
+          left: -100%;
+          border-top-left-radius: 40px;
+          border-bottom-left-radius: 40px;
+          border-right: 0;
+          -webkit-transform-origin: center right;
+          transform-origin: center right;
+          animation: loading-1 1.8s linear forwards;
+        } 
       }
     }
   }

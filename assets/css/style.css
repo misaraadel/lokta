@@ -979,6 +979,86 @@ ul {
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
+@-webkit-keyframes loading-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes loading-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes loading-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(144deg);
+  }
+}
+@keyframes loading-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(144deg);
+  }
+}
+@-webkit-keyframes loading-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes loading-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@-webkit-keyframes loading-4 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(36deg);
+  }
+}
+@keyframes loading-4 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(36deg);
+  }
+}
+@-webkit-keyframes loading-5 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(126deg);
+  }
+}
+@keyframes loading-5 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(126deg);
+  }
+}
 :root {
   --primary-color: #B1CB11;
   --secondary-color: #D81E1E;
@@ -1075,11 +1155,14 @@ button {
 .comming-product .solid {
   width: 80%;
   padding: 0px 20px;
-  background-color: var(--secondary-color);
   position: relative;
+  background-color: #ddd;
+  border: 1px solid var(--secondary-color);
   margin: -20px auto 0px;
   border-radius: 40px;
   direction: ltr;
+  overflow: hidden;
+  z-index: 9;
 }
 .comming-product .solid span {
   color: var(--light);
@@ -1087,6 +1170,15 @@ button {
   font-weight: 700;
   -webkit-margin-end: 5px;
           margin-inline-end: 5px;
+}
+.comming-product .solid .progress {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--secondary-color);
+  z-index: -1;
+  border-radius: 40px;
 }
 .comming-product .image-content {
   width: 100%;
@@ -1254,6 +1346,70 @@ button {
   border-color: var(--gray-color);
   opacity: 0.4;
   z-index: -2;
+}
+.product-box .flex-data .progress {
+  width: 50px;
+  height: 50px;
+  line-height: 100px;
+  background: none;
+  box-shadow: none;
+  position: relative;
+}
+.product-box .flex-data .progress.green .progress-bar {
+  border-color: var(--primary-color);
+}
+.product-box .flex-data .progress.green .progress-left .progress-bar {
+  -webkit-animation: loading-2 1.5s linear forwards 1.8s;
+          animation: loading-2 1.5s linear forwards 1.8s;
+}
+.product-box .flex-data .progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.product-box .flex-data .progress span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.product-box .flex-data .progress .progress-left {
+  left: 0;
+}
+.product-box .flex-data .progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-left: 0;
+  transform-origin: center left;
+}
+.product-box .flex-data .progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.product-box .flex-data .progress .progress-right {
+  right: 0;
+}
+.product-box .flex-data .progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-right: 0;
+  transform-origin: center right;
+  -webkit-animation: loading-1 1.8s linear forwards;
+          animation: loading-1 1.8s linear forwards;
 }
 .product-box .image-content {
   width: 100%;
@@ -2284,7 +2440,7 @@ textarea {
   flex-direction: column !important;
   justify-content: center;
 }
-.total-data li.btn-data button {
+.total-data li.btn-data a {
   width: 70%;
   height: 50px;
   display: flex;
@@ -2295,7 +2451,7 @@ textarea {
   margin-bottom: 15px;
   border-radius: 50px;
 }
-.total-data li.btn-data button img {
+.total-data li.btn-data a img {
   width: 24px;
   height: 24px;
   -o-object-fit: contain;
@@ -2303,12 +2459,12 @@ textarea {
   -webkit-margin-end: 10px;
           margin-inline-end: 10px;
 }
-.total-data li.btn-data button span {
+.total-data li.btn-data a span {
   color: var(--light);
   font-size: 15px;
   font-weight: 500;
 }
-.total-data li.btn-data button:hover img {
+.total-data li.btn-data a:hover img {
   -webkit-animation: tada 0.3s linear both;
           animation: tada 0.3s linear both;
 }
