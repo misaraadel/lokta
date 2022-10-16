@@ -35,3 +35,8 @@ Switch to the repo folder
 <p align="center"><a href="https://AQuadic.com" target="_blank"><img src="https://AQuadic.com/img/logo.svg" width="200"></a></p>
 
 <p align="center"><a href="https://github.com/misaraadel" target="_blank"><img src="https://avatars.githubusercontent.com/u/41232116?v=4" width="200"></a></p>
+
+
+## thank you ♥
+
+<p align="center"><a href="https://github.com/misaraadel" target="_blank"><img src="https://github.com/misaraadel/sonbola/blob/main/misara_logo.svg" width="200"></a></p>
