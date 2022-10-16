@@ -1100,6 +1100,10 @@ html[dir=rtl] .form-model .form-group .search-btn {
 html[dir=rtl] .comming-product .solid {
   display: rtl;
 }
+html[dir=rtl] .select-option::after {
+  left: 15px;
+  right: unset;
+}
 
 .general-section {
   width: 100%;
@@ -1261,6 +1265,20 @@ button {
   background-color: var(--light);
   padding: 0px 11px 14px 11px;
   transition: all 0.3s linear;
+}
+.product-box .owl-stage {
+  padding: 0px !important;
+  height: 100%;
+}
+.product-box .owl-carousel {
+  height: 100%;
+}
+.product-box .owl-carousel .item {
+  height: 100%;
+}
+.product-box .owl-carousel .owl-stage-outer,
+.product-box .owl-carousel .owl-item {
+  height: 100%;
 }
 .product-box .flex-data {
   width: 100%;
@@ -1437,6 +1455,7 @@ button {
   left: 10%;
   border-radius: 40px;
   text-align: center;
+  z-index: 9;
 }
 .product-box .image-content .message span {
   color: var(--light);
@@ -1609,6 +1628,11 @@ button {
   align-items: center;
   align-content: center;
   justify-content: space-between;
+}
+.navbar .content .lang {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--light);
 }
 .navbar .content .search-icon {
   width: 30px;
@@ -2198,11 +2222,30 @@ header img {
   color: var(--semi-dark);
   margin-bottom: 10px;
 }
+.form-group .select-option {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+.form-group .select-option .form-control {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.form-group .select-option::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: url("../images/arrow-down.svg") center/contain no-repeat;
+  top: calc(50% - 7px);
+  right: 15px;
+}
 .form-group .form-control {
   width: 100%;
   height: 50px;
   border-radius: 45px;
-  border: 1px solid var(--semi-dark);
+  border: 1px solid #A2A2A2;
   color: var(--dark);
   font-size: 15px;
   font-weight: 500;
@@ -2611,13 +2654,13 @@ textarea {
   justify-content: center;
   align-content: center;
   align-items: center;
-  text-align: center;
 }
 .about .content h1 {
   font-size: 30px;
   font-weight: 900;
   color: var(--primary-color);
   margin: 0px;
+  text-align: center;
 }
 .about .content p {
   color: var(--dark);
@@ -2841,6 +2884,46 @@ textarea {
 }
 .create-account:hover {
   color: var(--primary-color) !important;
+}
+
+.payment_method .form-check {
+  position: relative;
+  padding-right: 0;
+  margin-bottom: 15px;
+  padding: 0px !important;
+  width: 100%;
+}
+.payment_method .form-check .form-check-label {
+  text-align: center;
+  border: 1px solid #A2A2A2;
+  border-radius: 8px;
+  width: 100%;
+  padding: 20px 10px;
+  cursor: pointer;
+}
+.payment_method .form-check .form-check-label .pay_logo {
+  width: 100px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 20px auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.payment_method .form-check .form-check-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100% !important;
+  cursor: pointer;
+  opacity: 0;
+}
+.payment_method .form-check .form-check-input:checked ~ .form-check-label {
+  border: 1px solid #B1CB11;
+}
+.payment_method .form-check .form-check-input:checked ~ .form-check-label .name {
+  color: #B1CB11;
+  font-weight: bold;
 }
 
 @media (max-width: 999px) {

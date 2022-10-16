@@ -26,6 +26,48 @@ $(document).ready(function () {
         $('body').toggleClass('overflowNone')
     });
 
+    $('.owl-header').owlCarousel({
+        rtl: true,
+        loop:true,
+        margin: 20,
+        nav:false,
+        dots: true,
+        autoplay: true,
+        touchDrag  : true,
+		mouseDrag  : true,
+		autoWidth: false,
+		animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplayTimeout: 6000,
+		smartSpeed: 2000,
+		dragEndSpeed: 2000,
+		slidSpeed: 900,
+        paginationSpeed: 900,
+        autoplayHoverPause: true,
+        items:1
+    });
+
+    $('.owl-image').owlCarousel({
+        rtl: true,
+        loop:true,
+        margin: 20,
+        nav:false,
+        dots: false,
+        autoplay: true,
+        touchDrag  : true,
+		mouseDrag  : true,
+		autoWidth: false,
+		animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplayTimeout: 6000,
+		smartSpeed: 2000,
+		dragEndSpeed: 2000,
+		slidSpeed: 900,
+        paginationSpeed: 900,
+        autoplayHoverPause: true,
+        items:1
+    });
+
     $('.owl-products').owlCarousel({
         rtl: true,
         loop:true,
